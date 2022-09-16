@@ -3,6 +3,29 @@
 This repo contains all the code shown in my DevDay-Talk.
 
 
+## Generate SQLC Code
+
+To generate the sqlc go-classes run:
+
+```bash
+cd pkg/database && sqlc generate
+```
+
+
+## Database migrations
+
+To migrate a local postgresql database run:
+
+```bash
+# setup
+migrate -source file://./migrations -database "postgresql://postgres:postgres@localhost:5432/devday?sslmode=disable" up 1
+
+# teardown
+migrate -source file://./migrations -database "postgresql://postgres:postgres@localhost:5432/devday?sslmode=disable" down 1
+```
+
+
+
 ## Links
 
 Useful libraries:

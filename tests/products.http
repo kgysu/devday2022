@@ -1,0 +1,23 @@
+### GET products
+GET http://localhost:5000/products
+Accept: application/json
+
+
+### POST Create new Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+  "name": "Product A",
+  "kind": "unknown"
+}
+
+
+### GET product
+GET http://localhost:5000/products/e9e8da3e-7e49-4176-8169-a46779a4b2d9
+Accept: application/json
+
+
+### DELETE product
+DELETE http://localhost:5000/products/e9e8da3e-7e49-4176-8169-a46779a4b2d9
+Accept: application/json
