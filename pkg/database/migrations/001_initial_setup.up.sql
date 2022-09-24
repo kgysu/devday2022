@@ -10,3 +10,7 @@ CREATE TABLE IF NOT EXISTS products
     name        TEXT                     NOT NULL,
     kind        TEXT                     NOT NULL
 );
+
+
+-- ADD COLUM price
+-- ALTER TABLE products ADD COLUMN price TEXT DEFAULT '0';

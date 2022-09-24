@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"
@@ -45,5 +46,6 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 
 func ProductsHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("content-type", "application/json")
-	w.Write([]byte(`[{"name":"product A"},{"name":"product B"}]`))
+	products := []map[string]string{{"name": "product A"}, {"name": "product B"}}
+	json.NewEncoder(w).Encode(products)
 }

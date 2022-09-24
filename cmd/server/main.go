@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/kgysu/devday2022/pkg/database"
-	server2 "github.com/kgysu/devday2022/pkg/server"
+	"github.com/kgysu/devday2022/pkg/webserver"
 	"github.com/sirupsen/logrus"
 	"net/http"
 	"net/url"
@@ -27,7 +27,7 @@ func main() {
 	dir := createDir("postgresql://postgres:postgres@localhost:5432/devday")
 
 	// Create a multiplex Router
-	myServer := server2.NewServer(dir)
+	myServer := webserver.NewServer(dir)
 	router := mux.NewRouter()
 	router.HandleFunc("/", HomeHandler).Methods(http.MethodGet)
 	router.Use(loggingMiddleware)

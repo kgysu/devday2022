@@ -14,10 +14,10 @@ Content-Type: application/json
 
 
 ### GET product
-GET http://localhost:5000/products/e9e8da3e-7e49-4176-8169-a46779a4b2d9
+GET http://localhost:5000/products/323fa691-f799-45b3-8f89-4b1c8ed017e8
 Accept: application/json
 
 
 ### DELETE product
-DELETE http://localhost:5000/products/e9e8da3e-7e49-4176-8169-a46779a4b2d9
+DELETE http://localhost:5000/products/323fa691-f799-45b3-8f89-4b1c8ed017e8
 Accept: application/json
